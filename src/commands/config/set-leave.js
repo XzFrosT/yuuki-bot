@@ -2,7 +2,6 @@ const {MesssageEmbed} = require('discord.js')
 const Command = require('../../Structures/Command')
 const {think2} = require('../../settings/emojis.json')
 const db = require('quick.db')
-const logchannel = require('../../models/logchannel')
 
 module.exports = class extends Command {
     
@@ -22,13 +21,14 @@ module.exports = class extends Command {
     }
 
     async run(message, args) {
-        const channel = message.mentions.channels.first()
-        const newdata = new logchannel({
-            Channel : channel.id,
-            Guild : message.guild.id
-        })
-        newdata.save()
-        console.log(newdata)
-        message.channel.send(`You have set the channel ${channel} as the log channel!`)
+        let channel = message.mentions.channels.first()
+
+        if(!channel) {
+            return message.channel.send("Please mention a channel first")
+        }
+        db.set(`levchannel_${message.guild.id}`, channel.id)
+
+        message.channel.send(`Leave channel is seted as ${channel}!`)
+
     }
 }
