@@ -1,0 +1,11 @@
+{
+    "token": "NzQ5MjMwMDg1OTEwODIyOTQy.X0o85A.y-yqHNkRx-yGdYj8_26ROC6wLvg",
+    "prefix": "y!",
+    "owners": ["461875418912522241", "725619404330631229", "727318402099576953", "422185094565068830"],
+    "defaultPerms": ["SEND_MESSAGES"],
+    "mongoPath": "mongodb://localhost:27017/locl",
+    "YOUTUBE_API_KEY": "AIzaSyDNH34DMsfIxu5nJRie4xb3jItihanHgtQ",
+    "SOUNDCLOUD_CLIENT_ID": "02gUJC0hH2ct1EGOcYXQIzRFU91c72Ea",
+    "MAX_PLAYLIST_SIZE": 10,
+    "PRUNING": false
+}
